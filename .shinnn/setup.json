@@ -1,0 +1,41 @@
+{
+  "$comment": "セットアップの記録。/shinnn-app:setup が書き換えます。手で編集しないでください（CI の規約チェックが、mandatory に必須項目がそろっているかを確かめます）。標準の版は .claude/rules/.standards-version にあります。",
+  "templateVersion": "0.11.0",
+  "setupCompletedAt": null,
+  "profile": "full",
+  "reviewer": "@SHINNN_REVIEWER",
+  "mergePolicy": "human",
+  "$mergePolicyComment": "human: 人が ready にしてマージする / self-review: /shinnn-app:pr がセルフレビューと CI の通過後にマージする。/shinnn-app:setup の --merge-policy で変えます。",
+  "database": {
+    "mode": "undecided",
+    "$comment": "database-url / local-postgres / docker / embedded-postgres / pglite / managed のいずれか。scripts/setup-env.mjs が検出します。"
+  },
+  "mandatory": [
+    "claude-md",
+    "claude-rules",
+    "claude-settings-deny",
+    "import-restriction-lint",
+    "husky-pre-commit",
+    "ci-check",
+    "ci-test",
+    "ci-policy",
+    "issue-templates",
+    "issue-labels",
+    "docs-specification",
+    "docs-env",
+    "security-defaults",
+    "dependabot",
+    "npm-audit",
+    "commit-convention",
+    "handover-definition",
+    "codeowners"
+  ],
+  "optional": {
+    "client-only-profile": false,
+    "health-report": false,
+    "copilot-review": false,
+    "claude-pr-review": false,
+    "claude-mention": false
+  },
+  "$optionalComment": "true にするだけでは有効になりません。/shinnn-app:setup を実行すると、対応する .github/workflows/*.yaml.disabled の .disabled が外れ、必要な設定が生成されます。費用が発生する項目は PR 本文に目安が書かれます。"
+}
