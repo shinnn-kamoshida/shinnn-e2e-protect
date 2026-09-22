@@ -88,3 +88,5 @@ Docker が使えない場合の選択肢は `docs/env.md` に記録されてい�
 ## ライセンス
 
 MIT License. 詳細は [LICENSE](./LICENSE) を参照してください。
+
+ブランチ保護の試験
